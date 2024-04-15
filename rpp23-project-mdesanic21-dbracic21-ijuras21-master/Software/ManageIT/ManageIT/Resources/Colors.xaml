@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="RedColorBrush" Color="#ff0000"/>
+    <SolidColorBrush x:Key="OrangeRedColorBrush" Color="#ff3300"/>
+    <SolidColorBrush x:Key="OrangeColorBrush" Color="#ff6600"/>
+    <SolidColorBrush x:Key="AmberColorBrush" Color="#ff9900"/>
+    <SolidColorBrush x:Key="YellowColorBrush" Color="#ffcc00"/>
+    <SolidColorBrush x:Key="LimeColorBrush" Color="#ffff00"/>
+    <SolidColorBrush x:Key="ChartreuseColorBrush" Color="#ccff00"/>
+    <SolidColorBrush x:Key="LawnGreenColorBrush" Color="#99ff00"/>
+    <SolidColorBrush x:Key="GreenColorBrush" Color="#66ff00"/>
+    <SolidColorBrush x:Key="SpringGreenColorBrush" Color="#33ff00"/>
+    <SolidColorBrush x:Key="MediumSpringGreenColorBrush" Color="#00ff00"/>
+    <SolidColorBrush x:Key="MediumSeaGreenColorBrush" Color="#00ff33"/>
+    <SolidColorBrush x:Key="AliceBlueColorBrush" Color="#f0f8ff"/>
+    <SolidColorBrush x:Key="SeaGreenColorBrush" Color="#00ff66"/>
+    <SolidColorBrush x:Key="MediumAquamarineColorBrush" Color="#00ff99"/>
+    <SolidColorBrush x:Key="LightSeaGreenColorBrush" Color="#00ffcc"/>
+    <SolidColorBrush x:Key="AquaColorBrush" Color="#00ffff"/>
+    <SolidColorBrush x:Key="CyanResColorBrush" Color="#00ccff"/>
+    <SolidColorBrush x:Key="SkyBlueColorBrush" Color="#0099ff"/>
+    <SolidColorBrush x:Key="DodgerBlueColorBrush" Color="#0066ff"/>
+    <SolidColorBrush x:Key="RoyalBlueColorBrush" Color="#0033ff"/>
+    <SolidColorBrush x:Key="BlueColorBrush" Color="#0000ff"/>
+    <SolidColorBrush x:Key="MediumBlueColorBrush" Color="#3300ff"/>
+    <SolidColorBrush x:Key="DarkSlateBlueColorBrush" Color="#6600ff"/>
+    <SolidColorBrush x:Key="MediumPurpleColorBrush" Color="#9900ff"/>
+    <SolidColorBrush x:Key="DarkOrchidColorBrush" Color="#cc00ff"/>
+    <SolidColorBrush x:Key="MagentaColorBrush" Color="#ff00ff"/>
+    <SolidColorBrush x:Key="DeepPinkColorBrush" Color="#ff00cc"/>
+    <SolidColorBrush x:Key="HotPinkColorBrush" Color="#ff0099"/>
+    <SolidColorBrush x:Key="PinkColorBrush" Color="#ff0066"/>
+    <SolidColorBrush x:Key="LightPinkColorBrush" Color="#ff0033"/>
+</ResourceDictionary>

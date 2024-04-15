@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="ManageIT.MainActivity.UcReports"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ManageIT.MainActivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <Label Content="REPORTS" Background="{StaticResource DodgerBlueColorBrush}" FontWeight="Bold" HorizontalContentAlignment="Center" DockPanel.Dock="Top"></Label>
+        <StackPanel Orientation="Horizontal" Margin="10" DockPanel.Dock="Top" HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Report ID:" VerticalAlignment="Center"></Label>
+                <TextBox x:Name="txtReportID" VerticalAlignment="Center" Width="30"></TextBox>
+            </StackPanel>
+            <CheckBox x:Name="chkSelectAll" Content="Select All" VerticalAlignment="Center" Checked="chkSelectAll_Checked" Unchecked="chkSelectAll_Unchecked"/>
+            <ComboBox x:Name="cmbWorkers" Width="150" Margin="5"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="First day:" VerticalAlignment="Center"/>
+                <DatePicker x:Name="dtpStartDate" Width="150" Margin="5" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Last day:" VerticalAlignment="Center"/>
+                <DatePicker x:Name="dtpEndDate" Width="150" Margin="5" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Button x:Name="btnGenerateReport" Content="Generate report" Width="100" Height="30" Margin="5" Click="btnGenerateReport_Click"/>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="icReportList" Grid.Row="1" Margin="0,20,0,0" DockPanel.Dock="Bottom" ItemsSource="{Binding ReportList}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="LightGray" BorderThickness="1" Margin="5" Padding="10" CornerRadius="10">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding}" VerticalAlignment="Center"/>
+                                <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Button x:Name="btnDeleteReport" Click="btnDeleteReport_Click" Tag="{Binding}" Content="Delete" Margin="5" Padding="10" BorderThickness="0" Background="Tomato" Foreground="White"/>
+                                    <Button x:Name="btnOpenReport" Click="btnOpenReport_Click" Tag="{Binding}" Content="Open" Margin="5" Padding="10" BorderThickness="0" Background="ForestGreen" Foreground="White"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

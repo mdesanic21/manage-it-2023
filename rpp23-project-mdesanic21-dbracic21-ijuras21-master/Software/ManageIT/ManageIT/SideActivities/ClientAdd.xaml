@@ -1,0 +1,51 @@
+﻿<Window x:Class="ManageIT.SideActivities.ClientAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManageIT.SideActivities"
+        mc:Ignorable="d"
+        Title="Create Client" Height="450" Width="800" Loaded="Window_Loaded" PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid Margin="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Type:"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Email:"/>
+        <Label Grid.Row="3" Grid.Column="0" Content="Number:"/>
+        <Label Grid.Row="4" Grid.Column="0" Content="First Name:"/>
+        <Label Grid.Row="5" Grid.Column="0" Content="Last Name:"/>
+        <Label Grid.Row="6" Grid.Column="0" Content="Company Name:"/>
+        <Label Grid.Row="7" Grid.Column="0" Content="IBAN:"/>
+        <Label Grid.Row="8" Grid.Column="0" Content="Address:"/>
+
+        <ComboBox x:Name="cmbClientType" HorizontalAlignment="Left"  Grid.Row="1" Grid.Column="1" Width="120" SelectionChanged="cmbClientType_SelectionChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtEmailNew" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtNumberNew" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="txtFirstNameNew" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="5" Grid.Column="1" x:Name="txtLastNameNew" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="6" Grid.Column="1" x:Name="txtCompanyNameNew" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="7" Grid.Column="1" x:Name="txtIBANNew" Margin="0,0,0,5"/>
+        <TextBox Grid.Row="8" Grid.Column="1" x:Name="txtAddressNew" Margin="0,0,0,5"/>
+
+        <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button x:Name="btnCreateClient" Content="Create" Margin="5" Width="120" Padding="10" Click="btnCreateClient_Click"/>
+            <Button x:Name="btnExitAdd" Content="Cancel" Margin="5" Width="100" Padding="10" Click="btnExitAdd_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
